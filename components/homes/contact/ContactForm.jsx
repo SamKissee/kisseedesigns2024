@@ -10,44 +10,44 @@ export default function ContactForm() {
 
   // use Email js for recive message
 
+  React.useEffect(() => {
+    emailjs.init("_7mAcZtDIt_YLI_ph");
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("service_uebq0fp", "template_of5l13b", form.current, {
-        publicKey: "_7mAcZtDIt_YLI_ph",
-      })
-      .then(
-        (result) => {
-          console.log(result);
-          toast.success("Message sent successfully!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          document.getElementById("myFormOne").reset();
-        },
-        (error) => {
-          console.log(error);
-          console.log(error.text);
-          toast.error("Oops Message not Sent!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
-      );
+    emailjs.sendForm("service_uebq0fp", "template_of5l13b", form.current).then(
+      (result) => {
+        console.log(result);
+        toast.success("Message sent successfully!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        document.getElementById("form").reset();
+      },
+      (error) => {
+        console.log(error);
+        console.log(error.text);
+        toast.error("Oops Message not Sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    );
   };
 
   return (
-    <form className="contact-form" ref={form} onSubmit={sendEmail}>
+    <form id="form" className="contact-form" ref={form} onSubmit={sendEmail}>
       <div className="form-input-item mb-60">
         <label
           style={activeInputBoxes.includes("name") ? { color: "#FE7878" } : {}}
