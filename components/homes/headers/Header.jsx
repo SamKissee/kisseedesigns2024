@@ -28,28 +28,28 @@ export default function Header() {
   };
 
   const handleDarkmode = () => {
-    const currentState = localStorage?.getItem("idDarkMode");
+    const currentState = localStorage?.getItem("idLightMode");
 
-    if (JSON.parse(currentState) == true) {
-      localStorage.setItem("idDarkMode", false);
+    if (JSON.parse(currentState) == false) {
+      localStorage.setItem("idLightMode", true);
       document.body.classList.remove("dark-theme");
 
       addlightBg();
     } else {
-      localStorage?.setItem("idDarkMode", true);
+      localStorage?.setItem("idLightMode", false);
       document.body.classList.add("dark-theme");
       addDarkbg();
     }
   };
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
-    const currentState = localStorage?.getItem("idDarkMode");
+    const currentState = localStorage?.getItem("idLightMode");
     if (JSON.parse(currentState) == true) {
-      document.body.classList.add("dark-theme");
-      addDarkbg();
-    } else {
       document.body.classList.remove("dark-theme");
       addlightBg();
+    } else {
+      document.body.classList.add("dark-theme");
+      addDarkbg();
     }
   }, []);
 
