@@ -9,11 +9,9 @@ export default function Header() {
   const [darkMode, setDarkMode] = useState(true);
   const addDarkbg = () => {
     if (
-      document.body.style.backgroundImage !=
-      "url(/assets/img/bg/page-bg-dark-1.jpg"
+      document.body.style.backgroundImage != "url(/assets/img/bg/dark3.jpeg"
     ) {
-      document.body.style.backgroundImage =
-        "url(/assets/img/bg/page-bg-dark-1.jpg";
+      document.body.style.backgroundImage = "url(/assets/img/bg/dark3.jpeg";
 
       setDarkMode(true);
     }
@@ -21,9 +19,9 @@ export default function Header() {
 
   const addlightBg = () => {
     if (
-      document.body.style.backgroundImage != "url(/assets/img/bg/page-bg-1.jpg)"
+      document.body.style.backgroundImage != "url(/assets/img/bg/light3.jpeg)"
     ) {
-      document.body.style.backgroundImage = "url(/assets/img/bg/page-bg-1.jpg)";
+      document.body.style.backgroundImage = "url(/assets/img/bg/light3.jpeg)";
 
       setDarkMode(false);
     }
@@ -56,7 +54,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bostami-header-area mb-30 ">
+    <div className="bostami-header-area mb-10 ">
       <div className="container">
         <div className="bostami-header-wrap">
           <div className="row align-items-center">
