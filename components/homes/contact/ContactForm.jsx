@@ -14,7 +14,7 @@ export default function ContactForm() {
     e.preventDefault();
     emailjs
       .sendForm("service_uebq0fp", "template_of5l13b", form.current, {
-        publicKey: "JhBpywhg4mgMmjkUY",
+        publicKey: "_7mAcZtDIt_YLI_ph",
       })
       .then(
         (result) => {
@@ -31,6 +31,8 @@ export default function ContactForm() {
           document.getElementById("myFormOne").reset();
         },
         (error) => {
+          console.log(error);
+          console.log(error.text);
           toast.error("Oops Message not Sent!", {
             position: "top-right",
             autoClose: 5000,
