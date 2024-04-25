@@ -54,12 +54,12 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="bostami-header-area mb-10 ">
+    <div className="kissee-header-area mb-10 ">
       <div className="container">
-        <div className="bostami-header-wrap">
+        <div className="kissee-header-wrap">
           <div className="row align-items-center">
             <div className="col-6">
-              <div className="bostami-header-logo">
+              <div className="kissee-header-logo">
                 <Link className="site-logo" href="/">
                   <Image
                     width={153}
@@ -76,7 +76,7 @@ export default function Header() {
             </div>
 
             <div className="col-6">
-              <div className="bostami-header-menu-btn text-right">
+              <div className="kissee-header-menu-btn text-right">
                 <div
                   className="dark-btn dark-btn-stored mode-btn"
                   onClick={() => handleDarkmode()}

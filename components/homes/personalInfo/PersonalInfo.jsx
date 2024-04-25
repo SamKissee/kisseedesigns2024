@@ -7,9 +7,9 @@ import React from "react";
 export default function PersonalInfo() {
   return (
     <div className="col-xxl-3 col-xl-3">
-      <div className="bostami-parsonal-info-area">
-        <div className="bostami-parsonal-info-wrap">
-          <div className="bostami-parsonal-info-img">
+      <div className="kissee-parsonal-info-area">
+        <div className="kissee-parsonal-info-wrap">
+          <div className="kissee-parsonal-info-img">
             <Image
               width={240}
               height={240}
@@ -18,14 +18,14 @@ export default function PersonalInfo() {
             />
           </div>
 
-          <h4 className="bostami-parsonal-info-name">
+          <h4 className="kissee-parsonal-info-name">
             <a href="#">{profileInfo.name}</a>
           </h4>
-          <span className="bostami-parsonal-info-bio mb-15">
+          <span className="kissee-parsonal-info-bio mb-15">
             {profileInfo.title}
           </span>
 
-          <ul className="bostami-parsonal-info-social-link mb-30">
+          <ul className="kissee-parsonal-info-social-link mb-30">
             {socialMediaData.map((elm, i) => (
               <li key={i}>
                 <a style={{ color: elm.color }} href={elm.href}>
@@ -35,9 +35,9 @@ export default function PersonalInfo() {
             ))}
           </ul>
 
-          <div className="bostami-parsonal-info-contact mb-30">
+          <div className="kissee-parsonal-info-contact mb-30">
             {contactData.map((elm, i) => (
-              <div key={i} className="bostami-parsonal-info-contact-item">
+              <div key={i} className="kissee-parsonal-info-contact-item">
                 <div
                   style={{ color: `${elm.color}`, fontSize: `${elm.fontSize}` }}
                   className="icon"
@@ -52,7 +52,7 @@ export default function PersonalInfo() {
             ))}
           </div>
 
-          <div className="bostami-parsonal-info-btn">
+          <div className="kissee-parsonal-info-btn">
             <a className="btn-1" href="/sam_kissee_resume.pdf" download>
               <span style={{ color: "#fff" }} className="icon">
                 <i className="fa-regular fa-download"></i>

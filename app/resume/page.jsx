@@ -6,9 +6,8 @@ import React from "react";
 
 import MenuTwo from "@/components/homes/menus/MenuTwo";
 export const metadata = {
-  title: "Resume-1 || Bostami - Professional portfolio NextJS Template",
-  description:
-    "Discover Botami,the most impressive portfolio template for work showcase, blog",
+  title: "Resume | Kissee Designs",
+  description: "Work experience of Sam Kissee, an Idaho based web developer.",
 };
 export default function page() {
   return (

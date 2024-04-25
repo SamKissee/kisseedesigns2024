@@ -6,9 +6,9 @@ import Knowledges from "./Knowledges";
 export default function Resume() {
   return (
     <div className="col-xxl-8 col-xl-9">
-      <div className="bostami-page-content-wrap">
+      <div className="kissee-page-content-wrap">
         <div className="section-wrapper pl-60 pr-60 pt-60">
-          <div className="bostami-page-title-wrap mb-15">
+          <div className="kissee-page-title-wrap mb-15">
             <h2 className="page-title">Resume</h2>
           </div>
         </div>

@@ -7,9 +7,8 @@ import React from "react";
 
 import MenuTwo from "@/components/homes/menus/MenuTwo";
 export const metadata = {
-  title: "Contact-1 || Bostami - Professional portfolio NextJS Template",
-  description:
-    "Discover Botami,the most impressive portfolio template for work showcase, blog",
+  title: "Contact | Kissee Designs",
+  description: "Get in contact for React Native Development",
 };
 export default function page() {
   return (
